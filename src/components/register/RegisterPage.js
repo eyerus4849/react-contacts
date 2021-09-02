@@ -1,13 +1,13 @@
 import RegisterForm from './RegisterForm';
-
+import { Login ,Loginholder} from "../style"
 const RegisterPage = (props) => {
     return (
-        <div>
+        <Loginholder>
             <RegisterForm />
-            <div>
-                <p>Already have an account? <a href="/login">Login</a>.</p>
-            </div>
-        </div>
+            <Login>
+                Already have an account? <a href="/login">Login</a>.
+            </Login>
+        </Loginholder>
     )
 }
 

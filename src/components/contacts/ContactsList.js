@@ -1,8 +1,9 @@
 import ContactCard from "./ContactCard"
-
+import styled,{css} from 'styled-components'
+import {Div} from "../style"
 const ContactList = ({ contacts=[] }) => {
     return (
-        <div>
+        <Div>
             {contacts.map((contact) => 
                 <ContactCard 
                     key={contact.id}
@@ -12,7 +13,7 @@ const ContactList = ({ contacts=[] }) => {
                     profilePic={contact.profilePic}
                 />
             )}
-        </div>
+        </Div>
     )
 }
 

@@ -1,23 +1,51 @@
+import styled,{css} from 'styled-components'
+const DetailCard=styled.div`
+width: 500px;
+height:400px;
+margin:0 auto;
+box-shadow: 0 6px 18px -9px rgba(0, 0, 0, 0.75);
+padding:30px 100px;
+`
+const Image=styled.img`
+width: 100px;
+border-radius: 50%;
+`
+const ImageHolder=styled.div`
+width: 100px;
+margin:0 auto;
+`
+const Name=styled.p`
+text-align:center;
+font-size: 25px;
+color: gray;
+`
+const Info=styled.div`
+padding:10px 60px;
+`
+const Dt=styled.dt`
+font-weight:500;
+margin-top:10px;
+`
 const  ContactDetailsCard = ({ contact }) => {
     return (
-        <div>
-            <div>
-                <img src={contact?.profilePic} alt={`Profile of ${contact?.firstName}${contact?.lastName}.`}/>
-            </div>
-            <div>
-                <p>{contact?.firstName} {contact?.lastName}</p>
+        <DetailCard>
+            <ImageHolder>
+                <Image src={contact?.profilePic} alt={`Profile of ${contact?.firstName}${contact?.lastName}.`}/>
+            </ImageHolder>
+            <Info>
+                <Name>{contact?.firstName} {contact?.lastName}</Name>
                 <dl>
-                    <dt>Phone Number</dt>
+                    <Dt>Phone Number</Dt>
                     <dd>{contact?.phoneNumber}</dd>
 
-                    <dt>Email</dt>
+                    <Dt>Email</Dt>
                     <dd>{contact?.email}</dd>
 
-                    <dt>Address</dt>
+                    <Dt>Address</Dt>
                     <dd>{contact?.address}</dd>
                 </dl>
-            </div>
-        </div>
+            </Info>
+        </DetailCard>
     )
 }
 

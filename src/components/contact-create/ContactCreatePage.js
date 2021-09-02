@@ -1,10 +1,10 @@
 import ContactCreateForm from "./ContactCreateForm";
-
+import { Div } from "../style"
 const ContactCreatePage = () => {
     return (
-        <div>
+        <Div>
             <ContactCreateForm />
-        </div>
+        </Div>
     )
 }
 

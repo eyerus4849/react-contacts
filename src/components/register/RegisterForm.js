@@ -1,5 +1,5 @@
 import React from 'react';
-
+import {Input,Button,Form} from "../style"
 class RegisterForm extends React.Component {
 
     constructor(props) {
@@ -27,10 +27,8 @@ class RegisterForm extends React.Component {
 
     render() {
         return (
-            <form onSubmit={this.handleFormSubmit}>
-                <div>
-                    <label htmlFor="username">Username</label>
-                    <input 
+            <Form  onSubmit={this.handleFormSubmit}>
+                <Input
                         id="username"
                         name="username"
                         type="text" 
@@ -38,10 +36,7 @@ class RegisterForm extends React.Component {
                         value={this.state.username}
                         onChange={this.handleInputChange}
                     />
-                </div>
-                <div>
-                    <label htmlFor="password">Password</label>
-                    <input 
+                <Input
                         id="password"
                         name="password"
                         type="password" 
@@ -49,11 +44,8 @@ class RegisterForm extends React.Component {
                         value={this.state.password}
                         onChange={this.handleInputChange}
                     />
-                </div>
-                <div>
-                    <button type="submit">Login</button>
-                </div>
-            </form>
+                    <Button type="submit">Login</Button>
+                 </Form>
         )
     }
 }

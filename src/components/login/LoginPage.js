@@ -1,13 +1,15 @@
 import LoginForm from "./LoginForm"
+import { Login ,Loginholder} from "../style"
+
 
 const LoginPage = (props) => {
     return (
-        <div>
+        <Loginholder>
             <LoginForm />
-            <div>
-                <p>Don't have an account? <a href="/register">Register</a>.</p>
-            </div>
-        </div>
+            <Login>
+                Don't have an account? <a href="/register">Register</a>.
+            </Login>
+        </Loginholder>
     )
 }
 
